@@ -261,9 +261,9 @@ $ spark-submit --class org.apache.spark.examples.JavaWordCount \
 
 ![Hadoop](https://superzhangx.github.io/images/20180201hadoop.png)
 
-![Resource Manager](https://github.com/superzhangx/superzhangx.github.io/blob/master/images/20180201ResourceManager.png)
+![Resource Manager](https://superzhangx.github.io/images/20180201ResourceManager.png)
 
-![Spark UI](https://github.com/superzhangx/superzhangx.github.io/blob/master/images/20180201Spark.png)
+![Spark UI](https://superzhangx.github.io/images/20180201Spark.png)
 
-![Spark History UI](https://github.com/superzhangx/superzhangx.github.io/blob/master/images/20180201SparkHistory.png)
+![Spark History UI](https://superzhangx.github.io/images/20180201SparkHistory.png)
 
