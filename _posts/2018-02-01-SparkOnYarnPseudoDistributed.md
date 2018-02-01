@@ -240,7 +240,7 @@ $ spark-submit --class org.apache.spark.examples.JavaWordCount \
 ```
 
 ## 无图无真相
-![Hadoop](https://superzhangx.github.io/blob/master/images/20180201hadoop.png)
+![Hadoop](https://superzhangx.github.io/images/20180201hadoop.png)
 
 ![Resource Manager](https://github.com/superzhangx/superzhangx.github.io/blob/master/images/20180201ResourceManager.png)
 
