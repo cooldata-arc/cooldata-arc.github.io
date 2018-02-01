@@ -33,6 +33,7 @@ Spark	|	spark-2.2.1-bin-hadoop2.7
 
 ### 安装Hadoop的准备工作
 * 创建用户
+
 ``` bash
 $ sudo useradd -m hadoop -s /bin/bash # 创建Hadoop用户且用bash作为shell
 $ sudo passwd hadoop # 设置密码
@@ -41,6 +42,7 @@ $ su - hadoop
 ```
 
 * 设置SSH无密码登录
+
 ``` bash
 $ cd ~/.ssh/
 $ ssh-keygen -t rsa # 一路回车，成功生成秘钥
@@ -51,6 +53,7 @@ $ ssh localhost # 正常情况这时就不需要密码了，如有问题Google�
 ## 安装Hadoop
 
 * 解压hadoop包到安装目录并授权
+
 ``` bash
 $ sudo tar -zxvcf hadoop-2.7.5.tar.gz -C /deploy # 解压到想要安装的目录
 $ cd /deploy
@@ -59,6 +62,7 @@ $ sudo chown -R hadoop ./hadoop # 设置权限
 ```
 
 * 设置环境变量
+
 ``` bash
 $ vim ~/.bashrc # 将一下代码添加至末尾
 
@@ -71,6 +75,7 @@ $ source ~/.bashrc # 使以上配置生效
 ```
 
 * 将JDK路径添加至hadoop-env.sh
+
 ``` bash
 $ cd /deploy/hadoop/etc/hadoop
 $ vim hadoop-env.sh # 添加JDK路径
@@ -79,6 +84,7 @@ export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162
 ```
 
 * 添加以下代码至core-site.xml
+
 ``` xml
 <configuration>
     <property>
@@ -94,6 +100,7 @@ export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162
 ```
 
 * 添加以下代码至hdfs-site.xml 
+
 ``` xml
 <configuration>
     <property>
@@ -116,6 +123,7 @@ export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162
 ```
 
 * 添加以下代码至mapred-site.xml
+
 ``` xml
 <configuration>
 	<property>
@@ -134,6 +142,7 @@ export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162
 ```
 
 * 添加以下代码至yarn-site.xml
+
 ```xml
 <configuration>
     <property>
@@ -153,11 +162,13 @@ export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162
 OK,配置部分已经修改完毕，接下来就可以格式化NameNode，启动了！！！
 
 * NameNode格式化
+
 ``` bash
 $ ./bin/hdfs namenode -format
 ```
 
 * 启动Hadoop
+
 ``` bash
 $ ./sbin/start-all.sh
 $ jps # 如正常启动会出现一下进程
@@ -173,12 +184,14 @@ $ jps # 如正常启动会出现一下进程
 介个比Hadoop简单多了^_^
 
 * 解压spark-2.2.1-bin-hadoop2.7.tar.gz到安装目录
+
 ``` bash
 $ sudo tar -zxvf spark-2.2.1-bin-hadoop2.7.tar.gz -C /deploy
 $ sudo ln -s spark-2.2.1-bin-hadoop2.7 spark221 # 创建软连，用软连的名称，比用那长串舒服多了
 ```
 
 * 设置环境变量
+
 ``` bash
 vim ~/.bashrc # 以下代码至末尾
 export SPARK_HOME=/deploy/spark221
@@ -186,6 +199,7 @@ export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 ```
 
 * 添加以下代码至spark-env.sh
+
 ``` bash
 $ cd /deploy/spark221/conf
 $ cp spark-env.sh.template spark-env.sh
@@ -199,6 +213,7 @@ export SPARK_LOCAL_IP=IP
 ```
 
 * 添加以下代码至spark-defaults.conf
+
 ``` bash
 $ vim spark-defaults.conf # 添加以下代码
 spark.master=spark://localhost:7077
@@ -213,11 +228,13 @@ spark.history.ui.port=18080
 
 
 * 配置slaves
+
 ``` bash
 $ cp slaves.template slaves # 在这里拷贝一个就可以了，里面默认的就是localhost
 ```
 
 * OK，启动Spark
+
 ``` bash
 $ ./sbin/start-all.sh
 $ ./sbin/start-history-server.sh
@@ -228,6 +245,7 @@ $ jps
 ```
 
 ## 提交运行WorldCount
+
 ``` bash
 $ spark-submit --class org.apache.spark.examples.JavaWordCount \
     --master yarn \
@@ -240,6 +258,7 @@ $ spark-submit --class org.apache.spark.examples.JavaWordCount \
 ```
 
 ## 无图无真相
+
 ![Hadoop](https://superzhangx.github.io/images/20180201hadoop.png)
 
 ![Resource Manager](https://github.com/superzhangx/superzhangx.github.io/blob/master/images/20180201ResourceManager.png)
