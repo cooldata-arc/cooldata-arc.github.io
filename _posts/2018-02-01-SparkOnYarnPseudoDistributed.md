@@ -37,6 +37,7 @@ $ su - hadoop
 ```
 
 * 设置SSH无密码登录
+
 ``` bash
 $ cd ~/.ssh/
 $ ssh-keygen -t rsa # 一路回车，成功生成秘钥
