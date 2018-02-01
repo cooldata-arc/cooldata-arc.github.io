@@ -4,6 +4,8 @@ date:   2018-02-01 16:00:00
 title:  "Spark On Yarn Pseudo Distributed"
 categories: Spark
 tags:  Spark Yarn Pseudo Distributed
+excerpt: 新版本的Spark On Yarn伪分布搭建!
+mathjax: true
 ---
 
 * content
