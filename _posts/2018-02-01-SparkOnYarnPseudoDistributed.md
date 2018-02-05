@@ -234,6 +234,7 @@ $ cp slaves.template slaves # 在这里拷贝一个就可以了，里面默认�
 ```
 
 * OK，启动Spark
+
 ``` bash
 $ ./sbin/start-all.sh
 $ ./sbin/start-history-server.sh
@@ -243,4 +244,26 @@ $ jps
 29228 Worker
 ```
 
+## 提交运行WorldCount
+
+``` bash
+$ spark-submit --class org.apache.spark.examples.JavaWordCount \
+    --master yarn \
+    --deploy-mode cluster \
+    --driver-memory 1g \
+    --executor-memory 1g \
+    --executor-cores 1 \
+    /deploy/spark221/examples/jars/spark-examples_2.11-2.2.1.jar \
+    /input/a.txt
+```
+
+## 无图无真相
+
+![Hadoop](https://superzhangx.github.io/images/20180201hadoop.png)
+
+![Resource Manager](https://superzhangx.github.io/images/20180201ResourceManager.png)
+
+![Spark UI](https://superzhangx.github.io/images/20180201Spark.png)
+
+![Spark History UI](https://superzhangx.github.io/images/20180201SparkHistory.png)
 
