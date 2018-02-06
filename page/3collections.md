@@ -26,6 +26,10 @@ type: page
 
 ## 编程语言
 
+### Java
+
+* [dzone.com 不错的技术栈，包含各类技术](https://dzone.com/articles/9-best-practices-to-handle-exceptions-in-java)
+
 ### Scala
 
 * [Scala 基础](http://www.runoob.com/scala/scala-pattern-matching.html)
