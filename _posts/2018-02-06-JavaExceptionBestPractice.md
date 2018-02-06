@@ -73,7 +73,7 @@ public void closeResourceInFinally() {
 * 使用Java7的Try-With-Resource特性
    如果您的资源实现了自动关闭接口，您可以使用它。这就是大多数Java标准资源所做的。当您在try子句中打开资源时，当try块被执行或异常处理后，它会自动关闭。
 
-``` Java
+``` java
 public void automaticallyCloseResource() {
     File file = new File("./tmp.txt");
     try (FileInputStream inputStream = new FileInputStream(file);) {
@@ -85,7 +85,7 @@ public void automaticallyCloseResource() {
     }
 }
 ```
-   
+
 ### 优先具体异常
 抛出的异常越具体越明确越好，要记住，一个不了解你代码的同事，或将在几个月后，需要调用你的方法来处理这个异常。因此需要保证提供给他们尽可能多的信息；这使你的API更容易理解，从而使方法调用者能够更好地处理异常或避免使用额外的检查。例如：用NumberFormatException代替一个IllegalArgumentException,应该避免抛出这样不明确的异常。
 ``` java
