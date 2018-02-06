@@ -249,8 +249,6 @@ public void wrapException(String input) throws MyBusinessException {
 正如您所看到的，当您抛出或捕获异常时，您应该考虑许多不同的事情。它们中的大多数都有提高代码可读性或API可用性的目标。
 异常通常是错误处理机制和通信媒介。因此，您应该确保与您的同事讨论您想要应用的最佳实践和规则，以便每个人都理解通用概念并以相同的方式使用它们。
 
------------------------------------
+* * *
 
-[google]: http://google.com/        "Google"
-
-[9 Best Practices to Handle Exceptions in Java]: https://dzone.com/articles/9-best-practices-to-handle-exceptions-in-java	"9 Best Practices to Handle Exceptions in Java"
+[9 Best Practices to Handle Exceptions in Java]: https://dzone.com/articles/9-best-practices-to-handle-exceptions-in-java
