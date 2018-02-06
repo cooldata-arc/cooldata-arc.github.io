@@ -22,6 +22,7 @@ mathjax: true
 
 ### 用Try-With-Resource特性或者在Finally中释放资源
 通常情况下，在try块中使用一个资源，需要在之后关闭它。在这些情况下一个常见的错误是在try块末尾释放资源。
+
 ``` java
 public void doNotCloseResourceInTry{
 	FileInputStream inputStream = null;
@@ -40,46 +41,51 @@ public void doNotCloseResourceInTry{
     }
 }
 ```
+
 以上异常处理方式的问题在于，只要不抛出异常就可以正常工作，try块中的所有语句都将被执行；但在try块中发生异常，这意味着无法到达try块的末尾；因此，资源将不会释放。
 
 因此，应该将所有的清理代码放入finally块中，或者使用try-to-resource语句。
 
 * 在Finally块中释放资源
    与在try块末尾释放资源相比，finally块总是会被执行的（在try块成功执行之后或者在catch中处理一个异常之后）。
-   ``` java
-   public void closeResourceInFinally() {
-       FileInputStream inputStream = null;
-	    try {
-	        File file = new File("./tmp.txt");
-	        inputStream = new FileInputStream(file);
-	        // use the inputStream to read a file
-	    } catch (FileNotFoundException e) {
-	        log.error(e);
-	    } finally {
-	        if (inputStream != null) {
-	            try {
-	                inputStream.close();
-	            } catch (IOException e) {
-	                log.error(e);
-	            }
-	        }
-	    }
-	}
-   ```
+
+``` java
+public void closeResourceInFinally() {
+   FileInputStream inputStream = null;
+    try {
+        File file = new File("./tmp.txt");
+        inputStream = new FileInputStream(file);
+        // use the inputStream to read a file
+    } catch (FileNotFoundException e) {
+        log.error(e);
+    } finally {
+        if (inputStream != null) {
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                log.error(e);
+            }
+        }
+    }
+}
+```
+
 * 使用Java7的Try-With-Resource特性
    如果您的资源实现了自动关闭接口，您可以使用它。这就是大多数Java标准资源所做的。当您在try子句中打开资源时，当try块被执行或异常处理后，它会自动关闭。
-   ``` Java
-	public void automaticallyCloseResource() {
-	    File file = new File("./tmp.txt");
-	    try (FileInputStream inputStream = new FileInputStream(file);) {
-	        // use the inputStream to read a file
-	    } catch (FileNotFoundException e) {
-	        log.error(e);
-	    } catch (IOException e) {
-	        log.error(e);
-	    }
-	}
-   ```
+
+``` Java
+public void automaticallyCloseResource() {
+    File file = new File("./tmp.txt");
+    try (FileInputStream inputStream = new FileInputStream(file);) {
+        // use the inputStream to read a file
+    } catch (FileNotFoundException e) {
+        log.error(e);
+    } catch (IOException e) {
+        log.error(e);
+    }
+}
+```
+   
 ### 优先具体异常
 抛出的异常越具体越明确越好，要记住，一个不了解你代码的同事，或将在几个月后，需要调用你的方法来处理这个异常。因此需要保证提供给他们尽可能多的信息；这使你的API更容易理解，从而使方法调用者能够更好地处理异常或避免使用额外的检查。例如：用NumberFormatException代替一个IllegalArgumentException,应该避免抛出这样不明确的异常。
 ``` java
