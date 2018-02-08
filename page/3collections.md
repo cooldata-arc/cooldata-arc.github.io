@@ -24,6 +24,18 @@ type: page
 
 * [Spark Streaming源码解析系列](https://github.com/lw-lin/CoolplaySpark/tree/master/Spark%20Streaming%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E7%B3%BB%E5%88%97)
 
+* [Spark 原理](http://www.aboutyun.com/thread-20781-1-1.html)
+
+* [Spark 原理](http://blog.csdn.net/superman_xxx/article/details/52888063)
+
+* [Spark 原理](http://www.aboutyun.com/thread-21644-1-1.html)
+
+https://0x0fff.com/spark-architecture-shuffle/
+
+https://www.iteblog.com/archives/1964.html
+
+https://databricks.com/
+
 ## 编程语言
 
 ### Java
@@ -45,6 +57,10 @@ type: page
 ### NodeJS
 
 * [七天学会NodeJS -Nanqiao Deng](https://nqdeng.github.io/7-days-nodejs)
+
+## 性能调优
+
+* [系统性能调优吐血总结分享](http://www.cnblogs.com/wcyao/archive/2011/06/29/2091962.htm)
 
 ## 框架&脚手架
 
