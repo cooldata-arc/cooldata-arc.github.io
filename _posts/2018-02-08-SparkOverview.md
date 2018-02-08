@@ -2,7 +2,7 @@
 layout: post
 date:   2018-02-08 11:00:00
 title:  "Spark Overview"
-categories: Spark Overview
+categories: Spark
 tags:  Spark Overview 概述
 mathjax: true
 ---
