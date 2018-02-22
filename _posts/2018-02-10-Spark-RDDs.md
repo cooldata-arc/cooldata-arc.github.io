@@ -63,3 +63,21 @@ RDDs支持以下俩种类型的操作：
 Spark中的所有转换都是惰性的，因为他们不会立即计算结果；它们只记录应用于基本数据集的转换。只有当操作需要返回到驱动程序时才计算转换。
 默认情况下，每次您对它执行操作时，每个转换的RDD都可以重新计算。但是，您也可以使用*persist(或缓存)方法在内存中持久化一个RDD*，在这种情况下，Spark将在您下次查询时使集群周围的元素获得更快的访问。还支持在磁盘上持久化RDDs，或者在多个节点上进行复制。
 
+### 基础操作
+
+``` scala
+val lines = sc.textFile("data.txt")
+val lineLengths = lines.map(s => s.length)
+val totalLength = lineLengths.reduce((a, b) => a + b)
+```
+
+第一行从外部文件定义了一个基本RDD。该数据集没有加载到内存中，或者在其他情况下执行:行仅仅是指向该文件的指针。第二行定义了lineLengths作为映射转换的结果。同样，由于懒惰，lineLengths并没有立即得到计算。最后，我们运行reduce，这是一个操作。在这一点上，Spark将计算分解为在独立的机器上运行的任务，并且每台机器都运行map的一部分和局部还原，只返回其对驱动程序的响应。
+
+如果我们以后还想使用lineLengths，我们可以加上：
+
+``` scala
+lineLengths.persist()
+```
+
+在reduce之前，这将导致lineLengths在第一次计算之后保持到内存中。
+
