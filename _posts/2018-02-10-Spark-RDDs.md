@@ -136,9 +136,9 @@ val counts = pairs.reduceByKey((a, b) => a + b)
 下表列出了Spark支持的一些常见转换。
 
 Transformations |   描述
-map(func)   |   返回一个新的分布式数据集，该数据集通过函数func传递源的每个元素。
-filter(func)    |   返回一个新的数据集，它选择了func返回true的源元素。
-flatMap(func)   |   类似于map，但是每个输入项都可以映射到0或更多的输出项(因此func应该返回一个Seq而不是单个项目)。
+map(func)           |   返回一个新的分布式数据集，该数据集通过函数func传递源的每个元素。
+filter(func)        |   返回一个新的数据集，它选择了func返回true的源元素。
+flatMap(func)       |   类似于map，但是每个输入项都可以映射到0或更多的输出项(因此func应该返回一个Seq而不是单个项目)。
 mapPartitions(func) |   类似于map，但是在RDD的每个分区(块)上分别运行，所以func必须在类型为T的RDD上运行时，Iterator<T> => Iterator<U> 。
 mapPartitionsWithIndex(func)    |   类似于mapPartitions，但也提供了表示分区索引的func，因此func必须是类型 (Int, Iterator<T>) => Iterator<U>,当运行在T类型的RDD上时。
 sample(withReplacement, fraction, seed) |   使用给定的随机数生成器种子，使用给定的随机数生成器种子，对数据的一小部分进行或不进行替换。
