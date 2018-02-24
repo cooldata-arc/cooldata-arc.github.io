@@ -137,6 +137,8 @@ val counts = pairs.reduceByKey((a, b) => a + b)
 
 Transformations |   描述
 map(func)           |   返回一个新的分布式数据集，该数据集通过函数func传递源的每个元素。
+
+
 filter(func)        |   返回一个新的数据集，它选择了func返回true的源元素。
 flatMap(func)       |   类似于map，但是每个输入项都可以映射到0或更多的输出项(因此func应该返回一个Seq而不是单个项目)。
 mapPartitions(func) |   类似于map，但是在RDD的每个分区(块)上分别运行，所以func必须在类型为T的RDD上运行时，Iterator<T> => Iterator<U> 。
