@@ -141,14 +141,13 @@ filter(func)        |   返回一个新的数据集，它选择了func返回true
 flatMap(func)       |   类似于map，但是每个输入项都可以映射到0或更多的输出项(因此func应该返回一个Seq而不是单个项目)。
 mapPartitions(func) |   类似于map,但是在RDD的每个分区(块)上分别运行，所以func必须在类型为T的RDD上运行时Iterator<T>=>terator<U>。
 mapPartitionsWithIndex(func)    |   类似于mapPartitions，但也提供了表示分区索引的func，因此func必须是类型 (Int, Iterator<T>)=>Iterator<U>,当运行在T类型的RDD上时。
-
 sample(withReplacement, fraction, seed) |   使用给定的随机数生成器种子，使用给定的随机数生成器种子，对数据的一小部分进行或不进行替换。
 union(otherDataset) |   返回一个新的数据集，该数据集包含源数据集和参数中的元素的联合。
 intersection(otherDataset)  |   返回一个新的RDD，它包含源数据集中元素和参数的交集。
 distinct([numTasks]))   |   返回包含源数据集的不同元素的新数据集。
-groupByKey([numTasks])  |   当调用(K, V)对的数据集时，返回一个数据集(K, Iterable)对。
-注意:如果要对每个键执行聚合(比如求和或平均值)，使用reduceByKey或aggregateByKey会获得更好的性能。
+groupByKey([numTasks])  |   当调用(K, V)对的数据集时，返回一个数据集(K, Iterable)对。注意:如果要对每个键执行聚合(比如求和或平均值)，使用reduceByKey或aggregateByKey会获得更好的性能。
 注意:默认情况下，输出的并行度取决于父RDD分区的数量。您可以通过一个可选的numTasks参数来设置不同数量的任务。
+
 reduceByKey(func, [numTasks])   |   当调用(K、V)的数据集对,返回一个数据集(K、V)对每个键的值在哪里聚合使用给定减少函数func,必须(V,V)= > V型像groupByKey,减少任务的数量通过一个可选的第二个参数是可配置的。
 aggregateByKey(zeroValue)(seqOp, combOp, [numTasks])    |   当调用(K, V)对的数据集时，返回一个(K, U)对的数据集，其中每个键的值都使用给定的组合函数和一个中立的“零”值进行聚合。允许与输入值类型不同的聚合值类型，同时避免不必要的分配。和groupByKey一样，通过一个可选的第二个参数可配置减少任务的数量。
 sortByKey([ascending], [numTasks])  |   当调用(K, V)的数据集时，K实现了排序，返回一个(K, V)的数据集，按照布尔提升参数中指定的升序或降序排序。
