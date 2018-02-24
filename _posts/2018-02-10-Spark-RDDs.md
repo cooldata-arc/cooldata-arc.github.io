@@ -146,7 +146,6 @@ union(otherDataset) |   返回一个新的数据集，该数据集包含源数�
 intersection(otherDataset)  |   返回一个新的RDD，它包含源数据集中元素和参数的交集。
 distinct([numTasks]))   |   返回包含源数据集的不同元素的新数据集。
 groupByKey([numTasks])  |   当调用(K, V)对的数据集时，返回一个数据集(K, Iterable)对。注意:如果要对每个键执行聚合(比如求和或平均值)，使用reduceByKey或aggregateByKey会获得更好的性能。注意:默认情况下，输出的并行度取决于父RDD分区的数量。您可以通过一个可选的numTasks参数来设置不同数量的任务。
-
 reduceByKey(func, [numTasks])   |   当调用(K、V)的数据集对,返回一个数据集(K、V)对每个键的值在哪里聚合使用给定减少函数func,必须(V,V)= > V型像groupByKey,减少任务的数量通过一个可选的第二个参数是可配置的。
 aggregateByKey(zeroValue)(seqOp, combOp, [numTasks])    |   当调用(K, V)对的数据集时，返回一个(K, U)对的数据集，其中每个键的值都使用给定的组合函数和一个中立的“零”值进行聚合。允许与输入值类型不同的聚合值类型，同时避免不必要的分配。和groupByKey一样，通过一个可选的第二个参数可配置减少任务的数量。
 sortByKey([ascending], [numTasks])  |   当调用(K, V)的数据集时，K实现了排序，返回一个(K, V)的数据集，按照布尔提升参数中指定的升序或降序排序。
@@ -170,12 +169,10 @@ count() |   返回数据集中的元素个数。
 first() |   返回数据集的第一个元素(类似于take(1))。
 take(n) |   返回数据集的前n个元素的数组。
 takeSample(withReplacement, num, [seed])    |   返回一个包含数据集的num元素的随机样本的数组，有或没有替换，可选地预先指定一个随机数生成器种子。
-takeOrdered(n, [ordering])  |   使用它们的自然顺序或自定义比较器返回RDD的第一个n个元素。
+takeOrdered(n, [ordering])  |  使用它们的自然顺序或自定义比较器返回RDD的第一个n个元素。
 saveAsTextFile(path)    |   将数据集的元素作为文本文件(或文本文件集)写入本地文件系统、HDFS或任何其他hadoop支持的文件系统中。Spark将在每个元素上调用toString，将其转换为文件中的一行文本。
-saveAsSequenceFile(path) 
-(Java and Scala)    |   在本地文件系统、HDFS或任何其他Hadoop支持的文件系统中，将数据集的元素写入到给定路径中的Hadoop SequenceFile中。这可以在实现Hadoop可写界面的键值对的RDDs上获得。在Scala中，它也可用于隐式可转换的类型(Spark包括用于基本类型的转换，例如Int、Double、String等)。
-saveAsObjectFile(path) 
-(Java and Scala)    |   使用Java序列化以简单的格式编写数据集的元素，然后使用SparkContext.objectFile()加载。
+saveAsSequenceFile(path) (Java and Scala)    |   在本地文件系统、HDFS或任何其他Hadoop支持的文件系统中，将数据集的元素写入到给定路径中的Hadoop SequenceFile中。这可以在实现Hadoop可写界面的键值对的RDDs上获得。在Scala中，它也可用于隐式可转换的类型(Spark包括用于基本类型的转换，例如Int、Double、String等)。
+saveAsObjectFile(path) (Java and Scala)    |   使用Java序列化以简单的格式编写数据集的元素，然后使用SparkContext.objectFile()加载。
 countByKey()    |   只有在类型(K, V)类型的RDDs上才可用。返回一个(K, Int)对的hashmap (K, Int)对每个键的计数。
 foreach(func)   |   在数据集的每个元素上运行函数func。这通常用于诸如更新累加器或与外部存储系统交互等副作用。
 
