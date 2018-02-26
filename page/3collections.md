@@ -44,6 +44,8 @@ https://databricks.com/
 
 ### Scala
 
+* [Scala 在线文档](http://scala-lang.org/files/archive/spec/2.12/08-pattern-matching.html)
+
 * [Scala 基础](http://www.runoob.com/scala/scala-pattern-matching.html)
 
 ### JavaScript
