@@ -21,6 +21,11 @@ type: page
 * [4](http://wiki.mbalib.com/wiki/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%A8%A1%E5%9E%8B#.E6.95.B0.E6.8D.AE.E4.BB.93.E5.BA.93.E6.A8.A1.E5.9E.8B.E7.9A.84.E4.B8.BB.E8.A6.81.E5.86.85.E5.AE.B9.07UNIQ4f658cfe6ee0188a-nowiki-00000005-QINU2.07UNIQ4f658cfe6ee0188a-nowiki-00000006-QINU)
 * [5](http://blog.itpub.net/23659908/viewspace-1118762/)
 
+## 爬虫
+* scrapy python
+* [webmagic](https://github.com/code4craft/webmagic)
+
+
 ## 工具
 * [Unix 时间戳 Unix timestamp](http://tool.chinaz.com/Tools/unixtime.aspx)
 
