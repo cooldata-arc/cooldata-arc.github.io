@@ -9,6 +9,10 @@ type: page
 * content
 {:toc}
 
+## 用户画像(Persona)
+
+https://xtensio.com/user-persona/
+
 ## 关键词
 
 google styleguide
@@ -47,6 +51,8 @@ https://leetcode.com/
 - [http://regexr.com/](http://regexr.com/)
 - [google fonts](https://fonts.google.com/)
   - [Google Fonts 加速代理](https://fengmk2.com/blog/2016/google-fonts-mirror)
+
+axure (产品原型)
 
 ## BigData
 
