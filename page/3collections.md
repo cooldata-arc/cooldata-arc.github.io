@@ -9,6 +9,19 @@ type: page
 * content
 {:toc}
 
+## 关键词
+
+google styleguide
+LeetCode
+HackerRank(https://www.hackerrank.com/)
+ProjectEaler
+LinkedIn
+SOA
+Restful
+
+## 算法
+https://leetcode.com/
+
 ## 不错的Blog
 
 * http://blog.csdn.net/bluishglc/article/details/7696085
