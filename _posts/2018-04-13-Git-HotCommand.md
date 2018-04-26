@@ -67,13 +67,15 @@ git push -u origin --tags
 git clone 默认会把远程仓库整个给clone下来;但只会在本地默认创建一个master分支。如果最新的代码不在master分支上，该如何拿到呢？
 
 ``` bash
-git banch -r # 查看远程分支或
-git banch -a # 查看远程所有分支
+git branch -r # 查看远程分支或
+git branch -a # 查看远程所有分支
 
 # 用checkout命令来把远程分支取到本地
 $ git checkout -t origin/daily/1.4.1
+
 # 也可以使用fetch来做：
 $ git fetch origin python_mail.skin:python_mail.skin
+
 #不过通过fetch命令来建立的本地分支不是一个track branch，而且成功后不会自动切换到该分支上- z) 
 注意：不要在本地采用如下方法：
 $ git branch python_mail.skin
