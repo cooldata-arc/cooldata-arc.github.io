@@ -83,3 +83,19 @@ $ git checkout python_mail.skin
 $ git pull origin python_mail.skin:python_mail.skin
 #因为，这样建立的branch是以master为基础建立的，再pull下来的话，会和master的内容进行合并，有可能会发生冲突... 
 ```
+
+#### tag
+
+``` bash
+## create tag
+git tag -a v1.0.0 -m "message"
+
+## delete tag
+git tag -d v1.0.0
+
+## show tags
+git tag -l
+
+## create new branch from tag
+git branch newbranch v1.0.0
+```
