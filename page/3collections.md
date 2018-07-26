@@ -9,6 +9,13 @@ type: page
 * content
 {:toc}
 
+## 机器学习(machine learning)
+
+* [kafka-streams-machine-learning-examples](https://github.com/kaiwaehner/kafka-streams-machine-learning-examples)
+
+## 算法
+https://leetcode.com/
+
 ## 用户画像(Persona)
 
 https://xtensio.com/user-persona/
@@ -22,9 +29,6 @@ ProjectEaler
 LinkedIn
 SOA
 Restful
-
-## 算法
-https://leetcode.com/
 
 ## 不错的Blog
 
@@ -74,6 +78,12 @@ https://www.iteblog.com/archives/1964.html
 
 https://databricks.com/
 
+### Flink
+
+### ES
+
+### Kafka
+
 ## 编程语言
 
 ### Java
@@ -103,6 +113,10 @@ https://databricks.com/
 * [系统性能调优吐血总结分享](http://www.cnblogs.com/wcyao/archive/2011/06/29/2091962.htm)
 
 ## 框架&脚手架
+
+### 自动化部署
+
+* [jenkins](https://jenkins.io/)
 
 ### webpack
 
