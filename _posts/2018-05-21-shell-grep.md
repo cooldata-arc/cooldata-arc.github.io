@@ -23,70 +23,70 @@ grep [option] pattern file
 ```
 
 ### 命令参数
-Regexp selection and interpretation:
-  -E, --extended-regexp     PATTERN is an extended regular expression (ERE)
-  -F, --fixed-strings       PATTERN is a set of newline-separated fixed strings
-  -G, --basic-regexp        PATTERN is a basic regular expression (BRE)
-  -P, --perl-regexp         PATTERN is a Perl regular expression
-  -e, --regexp=PATTERN      use PATTERN for matching
-  -f, --file=FILE           obtain PATTERN from FILE
-  -i, --ignore-case         ignore case distinctions
-  -w, --word-regexp         force PATTERN to match only whole words
-  -x, --line-regexp         force PATTERN to match only whole lines
-  -z, --null-data           a data line ends in 0 byte, not newline
+Regexp selection and interpretation:<br>
+  -E, --extended-regexp     PATTERN is an extended regular expression (ERE)<br>
+  -F, --fixed-strings       PATTERN is a set of newline-separated fixed strings<br>
+  -G, --basic-regexp        PATTERN is a basic regular expression (BRE)<br>
+  -P, --perl-regexp         PATTERN is a Perl regular expression<br>
+  -e, --regexp=PATTERN      use PATTERN for matching<br>
+  -f, --file=FILE           obtain PATTERN from FILE<br>
+  -i, --ignore-case         ignore case distinctions<br>
+  -w, --word-regexp         force PATTERN to match only whole words<br>
+  -x, --line-regexp         force PATTERN to match only whole lines<br>
+  -z, --null-data           a data line ends in 0 byte, not newline<br>
 
-Miscellaneous:
-  -s, --no-messages         suppress error messages
-  -v, --invert-match        select non-matching lines
-  -V, --version             display version information and exit
-      --help                display this help text and exit
+Miscellaneous:<br>
+  -s, --no-messages         suppress error messages<br>
+  -v, --invert-match        select non-matching lines<br>
+  -V, --version             display version information and exit<br>
+      --help                display this help text and exit<br>
 
-Output control:
-  -m, --max-count=NUM       stop after NUM matches
-  -b, --byte-offset         print the byte offset with output lines
-  -n, --line-number         print line number with output lines
-      --line-buffered       flush output on every line
-  -H, --with-filename       print the file name for each match
-  -h, --no-filename         suppress the file name prefix on output
-      --label=LABEL         use LABEL as the standard input file name prefix
-  -o, --only-matching       show only the part of a line matching PATTERN
-  -q, --quiet, --silent     suppress all normal output
-      --binary-files=TYPE   assume that binary files are TYPE;
-                            TYPE is 'binary', 'text', or 'without-match'
-  -a, --text                equivalent to --binary-files=text
-  -I                        equivalent to --binary-files=without-match
-  -d, --directories=ACTION  how to handle directories;
-                            ACTION is 'read', 'recurse', or 'skip'
-  -D, --devices=ACTION      how to handle devices, FIFOs and sockets;
-                            ACTION is 'read' or 'skip'
-  -r, --recursive           like --directories=recurse
+Output control:<br>
+  -m, --max-count=NUM       stop after NUM matches<br>
+  -b, --byte-offset         print the byte offset with output lines<br>
+  -n, --line-number         print line number with output lines<br>
+      --line-buffered       flush output on every line<br>
+  -H, --with-filename       print the file name for each match<br>
+  -h, --no-filename         suppress the file name prefix on output<br>
+      --label=LABEL         use LABEL as the standard input file name prefix<br>
+  -o, --only-matching       show only the part of a line matching PATTERN<br>
+  -q, --quiet, --silent     suppress all normal output<br>
+      --binary-files=TYPE   assume that binary files are TYPE;<br>
+                            TYPE is 'binary', 'text', or 'without-match'<br>
+  -a, --text                equivalent to --binary-files=text<br>
+  -I                        equivalent to --binary-files=without-match<br>
+  -d, --directories=ACTION  how to handle directories;<br>
+                            ACTION is 'read', 'recurse', or 'skip'<br>
+  -D, --devices=ACTION      how to handle devices, FIFOs and sockets;<br>
+                            ACTION is 'read' or 'skip'<br>
+  -r, --recursive           like --directories=recurse<br>
   -R, --dereference-recursive
-                            likewise, but follow all symlinks
+                            likewise, but follow all symlinks<br>
       --include=FILE_PATTERN
-                            search only files that match FILE_PATTERN
+                            search only files that match FILE_PATTERN<br>
       --exclude=FILE_PATTERN
-                            skip files and directories matching FILE_PATTERN
-      --exclude-from=FILE   skip files matching any file pattern from FILE
-      --exclude-dir=PATTERN directories that match PATTERN will be skipped.
-  -L, --files-without-match print only names of FILEs containing no match
-  -l, --files-with-matches  print only names of FILEs containing matches
-  -c, --count               print only a count of matching lines per FILE
-  -T, --initial-tab         make tabs line up (if needed)
-  -Z, --null                print 0 byte after FILE name
+                            skip files and directories matching FILE_PATTERN<br>
+      --exclude-from=FILE   skip files matching any file pattern from FILE<br>
+      --exclude-dir=PATTERN directories that match PATTERN will be skipped.<br>
+  -L, --files-without-match print only names of FILEs containing no match<br>
+  -l, --files-with-matches  print only names of FILEs containing matches<br>
+  -c, --count               print only a count of matching lines per FILE<br>
+  -T, --initial-tab         make tabs line up (if needed)<br>
+  -Z, --null                print 0 byte after FILE name<br>
 
-Context control:
-  -B, --before-context=NUM  print NUM lines of leading context
-  -A, --after-context=NUM   print NUM lines of trailing context
-  -C, --context=NUM         print NUM lines of output context
-  -NUM                      same as --context=NUM
-      --group-separator=SEP use SEP as a group separator
-      --no-group-separator  use empty string as a group separator
-      --color[=WHEN],
-      --colour[=WHEN]       use markers to highlight the matching strings;
-                            WHEN is 'always', 'never', or 'auto'
-  -U, --binary              do not strip CR characters at EOL (MSDOS/Windows)
-  -u, --unix-byte-offsets   report offsets as if CRs were not there
-                            (MSDOS/Windows)
+Context control:<br>
+  -B, --before-context=NUM  print NUM lines of leading context<br>
+  -A, --after-context=NUM   print NUM lines of trailing context<br>
+  -C, --context=NUM         print NUM lines of output context<br>
+  -NUM                      same as --context=NUM<br>
+      --group-separator=SEP use SEP as a group separator<br>
+      --no-group-separator  use empty string as a group separator<br>
+      --color[=WHEN],<br>
+      --colour[=WHEN]       use markers to highlight the matching strings;<br>
+                            WHEN is 'always', 'never', or 'auto'<br>
+  -U, --binary              do not strip CR characters at EOL (MSDOS/Windows)<br>
+  -u, --unix-byte-offsets   report offsets as if CRs were not there<br>
+                            (MSDOS/Windows)<br>
 
 ### 规则表达式
 
