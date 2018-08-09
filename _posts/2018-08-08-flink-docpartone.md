@@ -73,8 +73,9 @@ Apache Flink是一个跨无界和有界数据流进行有状态计算的框架�
 
 显然，流是流处理的一个基本方面。但是，流可能具有不同的特性，这些特性会影响流的处理方式和处理方式。Flink是一个通用的处理框架，可以处理任何类型的流。
 
-&ensp;&ensp;&emsp;* *有界的和无界的流*:流可以是无界的或有界的，即固定大小的数据集。Flink具有处理无界流的复杂特性，但也有专门的操作符来有效地处理有界流。
-&ensp;&ensp;&emsp;* *实时流和记录流*:所有数据都作为流生成。有两种处理数据的方法。当流生成或将其持久化到存储系统(例如文件系统或对象存储)时实时处理，并在稍后处理。Flink应用程序可以处理记录或实时流。
+* *有界的和无界的流*:流可以是无界的或有界的，即固定大小的数据集。Flink具有处理无界流的复杂特性，但也有专门的操作符来有效地处理有界流。
+
+* *实时流和记录流*:所有数据都作为流生成。有两种处理数据的方法。当流生成或将其持久化到存储系统(例如文件系统或对象存储)时实时处理，并在稍后处理。Flink应用程序可以处理记录或实时流。
 
 ###### 1.2.3 状态
 
@@ -84,15 +85,15 @@ Apache Flink是一个跨无界和有界数据流进行有状态计算的框架�
 
 申请状态为Flink一级公民。通过查看Flink在状态处理上下文中提供的所有特性，您可以看到这一点。
 
-&ensp;&ensp;&emsp;* *多重状态原语* :Flink为不同的数据结构(如原子值、列表或映射)提供状态原语。开发人员可以根据函数的访问模式选择最有效的状态原语。
+* *多重状态原语* :Flink为不同的数据结构(如原子值、列表或映射)提供状态原语。开发人员可以根据函数的访问模式选择最有效的状态原语。
 
-&ensp;&ensp;&emsp;* *可插入状态后端* :应用程序状态由可插入状态后端管理并检查。Flink具有不同的状态后端，它们将状态存储在内存或RocksDB中，RocksDB是一种高效的嵌入式磁盘数据存储。定制的状态后端也可以插入。
+* *可插入状态后端* :应用程序状态由可插入状态后端管理并检查。Flink具有不同的状态后端，它们将状态存储在内存或RocksDB中，RocksDB是一种高效的嵌入式磁盘数据存储。定制的状态后端也可以插入。
 
-&ensp;&ensp;&emsp;* *精确一次状态一致性* :Flink的检查点和恢复算法保证了在出现故障时应用状态的一致性。因此，故障是透明处理的，不会影响应用程序的正确性。
+* *精确一次状态一致性* :Flink的检查点和恢复算法保证了在出现故障时应用状态的一致性。因此，故障是透明处理的，不会影响应用程序的正确性。
 
-&ensp;&ensp;&emsp;* *非常大的状态* :Flink由于其异步和增量检查点算法，能够维持几个tb大小的应用状态。
+* *非常大的状态* :Flink由于其异步和增量检查点算法，能够维持几个tb大小的应用状态。
 
-&ensp;&ensp;&emsp;* *可伸缩的应用程序* : Flink通过将状态重新分配给更多或更少的工作者来支持有状态应用程序的扩展。
+* *可伸缩的应用程序* : Flink通过将状态重新分配给更多或更少的工作者来支持有状态应用程序的扩展。
 
 ###### 1.2.4 时间
 
@@ -100,13 +101,13 @@ Apache Flink是一个跨无界和有界数据流进行有状态计算的框架�
 
 Flink提供了一组丰富的与时间相关的特性。
 
-&ensp;&ensp;&emsp;* Event-time Mode:使用事件时间语义处理流的应用程序根据事件的时间戳计算结果。因此，无论记录事件还是实时事件被处理，事件时间处理都允许得到精确和一致的结果。
+* Event-time Mode:使用事件时间语义处理流的应用程序根据事件的时间戳计算结果。因此，无论记录事件还是实时事件被处理，事件时间处理都允许得到精确和一致的结果。
 
-&ensp;&ensp;&emsp;* Watermark Support:Flink在事件时间应用程序中使用Watermark来推断时间。Watermark也是一种灵活的机制，可以平衡延迟和结果的完整性。
+* Watermark Support:Flink在事件时间应用程序中使用Watermark来推断时间。Watermark也是一种灵活的机制，可以平衡延迟和结果的完整性。
 
-&ensp;&ensp;&emsp;* Late Data Handling:当以Event-time Mode处理带有Watermark的流时，可能会发生在所有相关事件到达之前已经完成计算。这类事件称为延迟事件。Flink具有多个选项来处理延迟事件，比如通过侧输出重新路由它们，以及更新以前完成的结果。
+* Late Data Handling:当以Event-time Mode处理带有Watermark的流时，可能会发生在所有相关事件到达之前已经完成计算。这类事件称为延迟事件。Flink具有多个选项来处理延迟事件，比如通过侧输出重新路由它们，以及更新以前完成的结果。
 
-&ensp;&ensp;&emsp;* Processing-time Mode:除了Event-time Mode之外，Flink还支持Processing-time Mode语义，该语义可以根据处理机器的挂钟时间触发计算。Processing-time Mode可以适用于某些具有严格的低延迟要求、能够容忍近似结果的应用程序。
+* Processing-time Mode:除了Event-time Mode之外，Flink还支持Processing-time Mode语义，该语义可以根据处理机器的挂钟时间触发计算。Processing-time Mode可以适用于某些具有严格的低延迟要求、能够容忍近似结果的应用程序。
 
 ##### 1.3 API分层
 
@@ -244,15 +245,15 @@ Apache Flink将重点放在流处理的操作方面。在这里，我们解释�
 
 Flink提供了几个特性来确保应用程序保持运行并保持一致:
 
-&ensp;&ensp;&emsp;* Consistent Checkpoints:Flink的恢复机制基于应用程序状态的一致检查点。如果出现故障，应用程序将重新启动，并从最新的检查点加载其状态。与可重新设置的流源相结合，这个特性可以保证一次完全的状态一致性。
+* Consistent Checkpoints:Flink的恢复机制基于应用程序状态的一致检查点。如果出现故障，应用程序将重新启动，并从最新的检查点加载其状态。与可重新设置的流源相结合，这个特性可以保证一次完全的状态一致性。
 
-&ensp;&ensp;&emsp;* Efficient Checkpoints:如果应用程序保持tb级的状态，那么检查应用程序的状态可能非常昂贵。Flink可以执行异步和增量检查点，以保持检查点对应用程序的延迟sla的影响非常小。
+* Efficient Checkpoints:如果应用程序保持tb级的状态，那么检查应用程序的状态可能非常昂贵。Flink可以执行异步和增量检查点，以保持检查点对应用程序的延迟sla的影响非常小。
 
-&ensp;&ensp;&emsp;* End-to-End Exactly-Once:Flink为特定存储系统提供了事务性sinks，可以保证数据只写一次，即使在出现故障的情况下也是如此。
+* End-to-End Exactly-Once:Flink为特定存储系统提供了事务性sinks，可以保证数据只写一次，即使在出现故障的情况下也是如此。
 
-&ensp;&ensp;&emsp;* Integration with Cluster Managers:Flink与集群管理器紧密集成，例如Hadoop YARN、Mesos或Kubernetes。当流程失败时，将自动启动一个新流程来接管其工作。
+* Integration with Cluster Managers:Flink与集群管理器紧密集成，例如Hadoop YARN、Mesos或Kubernetes。当流程失败时，将自动启动一个新流程来接管其工作。
 
-&ensp;&ensp;&emsp;* High-Availability Setup:链接具有高可用性模式，可以消除所有单点故障。ha模式基于Apache ZooKeeper，这是一种经过实战验证的可靠分布式协调服务。
+* High-Availability Setup:链接具有高可用性模式，可以消除所有单点故障。ha模式基于Apache ZooKeeper，这是一种经过实战验证的可靠分布式协调服务。
 
 ##### 2.2 Update, Migrate, Suspend, and Resume Your Applications
 
@@ -260,19 +261,19 @@ Flink提供了几个特性来确保应用程序保持运行并保持一致:
 
 Flink的保存点是一个独特而强大的特性，它解决了有状态应用程序的更新问题和许多其他相关的挑战。保存点是应用程序状态的一致快照，因此非常类似于检查点。然而，与检查点不同的是，保存点需要手动触发，并且在应用程序停止时不会自动删除。保存点可用于启动状态兼容的应用程序并初始化其状态。保存点支持以下特性:
 
-&ensp;&ensp;&emsp;* Application Evolution:保存点可用于演进应用程序。应用程序的固定或改进版本可以从应用程序的前一个版本的保存点重新启动。也可以从较早的时间点(假设存在这样的保存点)启动应用程序，以修复有缺陷的版本产生的错误结果。
+* Application Evolution:保存点可用于演进应用程序。应用程序的固定或改进版本可以从应用程序的前一个版本的保存点重新启动。也可以从较早的时间点(假设存在这样的保存点)启动应用程序，以修复有缺陷的版本产生的错误结果。
 
-&ensp;&ensp;&emsp;* Cluster Migration:使用保存点，应用程序可以迁移(或克隆)到不同的集群。
+* Cluster Migration:使用保存点，应用程序可以迁移(或克隆)到不同的集群。
 
-&ensp;&ensp;&emsp;* Flink Version Updates:应用程序可以迁移到新的Flink版本上，使用保存点运行。
+* Flink Version Updates:应用程序可以迁移到新的Flink版本上，使用保存点运行。
 
-&ensp;&ensp;&emsp;* Application Scaling:保存点可用于增加或减少应用程序的并行性。
+* Application Scaling:保存点可用于增加或减少应用程序的并行性。
 
-&ensp;&ensp;&emsp;* A/B Tests and What-If Scenarios:应用程序的两个(或多个)不同版本的性能或质量可以通过从相同的保存点开始所有版本进行比较。
+* A/B Tests and What-If Scenarios:应用程序的两个(或多个)不同版本的性能或质量可以通过从相同的保存点开始所有版本进行比较。
 
-&ensp;&ensp;&emsp;* Pause and Resume:应用程序可以通过获取保存点并停止它来暂停。在以后的任何时候，应用程序都可以从保存点恢复。
+* Pause and Resume:应用程序可以通过获取保存点并停止它来暂停。在以后的任何时候，应用程序都可以从保存点恢复。
 
-&ensp;&ensp;&emsp;* Archiving:可以对保存点进行归档，以便能够将应用程序的状态重置到较早的时间点。
+* Archiving:可以对保存点进行归档，以便能够将应用程序的状态重置到较早的时间点。
 
 #### 3 监控和控制你的应用程序
 
@@ -280,13 +281,13 @@ Flink的保存点是一个独特而强大的特性，它解决了有状态应用
 
 Flink与许多常见的日志记录和监视服务很好地集成，并提供了一个REST API来控制应用程序和查询信息。
 
-&ensp;&ensp;&emsp;* Web UI:Flink提供了一个web UI来检查、监视和调试运行中的应用程序。它还可以用于提交执行的执行或取消执行。
+* Web UI:Flink提供了一个web UI来检查、监视和调试运行中的应用程序。它还可以用于提交执行的执行或取消执行。
 
-&ensp;&ensp;&emsp;* Logging:Flink实现了流行的slf4j日志记录接口，并与日志记录框架log4j或logback集成。
+* Logging:Flink实现了流行的slf4j日志记录接口，并与日志记录框架log4j或logback集成。
 
-&ensp;&ensp;&emsp;* Metrics:Flink具有一个复杂的度量系统，用于收集和报告系统和用户定义的度量。度量可以导出到多个报告器，包括JMX、Ganglia、石墨、普罗米修斯、StatsD、Datadog和Slf4j。
+* Metrics:Flink具有一个复杂的度量系统，用于收集和报告系统和用户定义的度量。度量可以导出到多个报告器，包括JMX、Ganglia、石墨、普罗米修斯、StatsD、Datadog和Slf4j。
 
-&ensp;&ensp;&emsp;* *REST API*:Flink公开了一个REST API来提交一个新应用程序，获取一个正在运行的应用程序的保存点，或者取消一个应用程序。REST API还公开元数据和收集的运行或完成应用程序的指标。
+* *REST API*:Flink公开了一个REST API来提交一个新应用程序，获取一个正在运行的应用程序的保存点，或者取消一个应用程序。REST API还公开元数据和收集的运行或完成应用程序的指标。
 
 
 
