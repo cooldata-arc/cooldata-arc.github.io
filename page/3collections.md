@@ -14,6 +14,9 @@ type: page
 * [kafka-streams-machine-learning-examples](https://github.com/kaiwaehner/kafka-streams-machine-learning-examples)
 
 ## 算法
+
+* [共轭先验](https://www.lesswrong.com/posts/u2gWM2poRPkBPFeLc/the-joys-of-conjugate-priors)
+
 https://leetcode.com/
 
 ## 用户画像(Persona)
