@@ -54,8 +54,14 @@ Markdown本身不支持背景色设置，需要采用内置html的方式实现�
 <table><tr><td bgcolor=#FF4500>这里的背景色是：OrangeRed，  十六进制颜色值：#FF4500， rgb(255, 69, 0)</td></tr></table>
 ```
 
-效果：
-<table><tr><td bgcolor=#FF4500>这里的背景色是：OrangeRed，  十六进制颜色值：#FF4500， rgb(255, 69, 0)</td></tr></table>
+Example:<br>
+
+<table>
+<tr>
+<td bgcolor=#FF4500>这里的背景色是：OrangeRed，  十六进制颜色值：#FF4500， rgb(255, 69, 0)
+</td>
+</tr>
+</table>
 
 #### 1.1.5 分割线
 
