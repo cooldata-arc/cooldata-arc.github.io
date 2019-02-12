@@ -17,7 +17,7 @@ MacOS 中利用Homebrew管理多版本Python环境。
 
 
 
-#### 安装Homebrew
+#### 1 安装Homebrew
 
 * 官网地址: http://brew.sh/index_zh-cn.html
 
@@ -29,7 +29,7 @@ MacOS 中利用Homebrew管理多版本Python环境。
 brew -v
 ```
 
-#### 安装pyenv
+#### 2 安装pyenv
 
 ``` bash
 # 运行以下脚本安装pyenv
@@ -39,25 +39,25 @@ brew install pyenv
 pyenv -v
 ```
 
-#### 查看可安装的Python版本
+#### 3 查看可安装的Python版本
 
 ``` bash
 pyenv install --list
 ```
 
-#### 安装特定版本的Python
+#### 4 安装特定版本的Python
 
 ``` bash
 pyenv install anaconda3-2018.12
 ```
 
-#### 查看pyenv已安装的Python版本
+#### 5 查看pyenv已安装的Python版本
 
 ``` bash
 pyenv versions
 ```
 
-#### 修改.bash_profile文件切换环境
+#### 6 修改.bash_profile文件切换环境
 
 ``` bash
 # 编辑.bash_profile文件加入以下内容
@@ -67,7 +67,7 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 source .bash_profile
 ```
 
-#### 指定目录切换Python版本
+#### 7 指定目录切换Python版本
 
 ``` bash
 # 进入python安装目录
@@ -77,13 +77,13 @@ cd /Users/zhangx/.pyenv/versions/anaconda3-2018.12
 pyenv local anaconda3-2018.12
 ```
 
-#### 设置全局Python版本（慎用）
+#### 8 设置全局Python版本（慎用）
 
 ``` bash
 pyenv global <versions>
 ```
 
-#### Pycharm选择pyenv安装的Python版本
+#### 9 Pycharm选择pyenv安装的Python版本
 
 Pycharm -> Preferences -> Project -> Project Interpreter -> Add Local
 
