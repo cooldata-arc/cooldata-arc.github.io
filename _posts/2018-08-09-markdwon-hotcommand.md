@@ -161,3 +161,8 @@ $\underbrace{ a+b+\cdots+z }_{26}$
 Example:<br>
 
 $\underbrace{ a+b+\cdots+z }_{26}$
+
+
+Example:<br>
+
+$||A||_{2 1} = \sum_i \sqrt{\sum_j a_{ij}^2}$
