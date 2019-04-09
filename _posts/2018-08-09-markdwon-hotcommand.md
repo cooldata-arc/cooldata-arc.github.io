@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   2018-08-09 18:04:00
-title:  "Markdwon 常用语法积累备忘"
+title:  "Markdown 常用语法积累备忘"
 categories: Markdown
 tags:  markdown
 mathjax: true
@@ -165,4 +165,4 @@ $\underbrace{ a+b+\cdots+z }_{26}$
 
 Example:<br>
 
-$||A||_{2 1} = \sum_i \sqrt{\sum_j a_{ij}^2}$
+$\parallel{A}_{2 1} = \sum_i \sqrt{\sum_j a_{ij}^2}$
