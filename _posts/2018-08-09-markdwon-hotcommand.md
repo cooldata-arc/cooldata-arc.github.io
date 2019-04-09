@@ -166,3 +166,5 @@ $\underbrace{ a+b+\cdots+z }_{26}$
 Example:<br>
 
 $$\parallel A \parallel_{2 1} = \sum_i \sqrt{\sum_j a_{ij}^2}$$
+
+$\parallel \cdot \parallel_2 $
