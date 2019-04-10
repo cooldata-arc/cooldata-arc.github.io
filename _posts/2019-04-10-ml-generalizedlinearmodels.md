@@ -1,15 +1,15 @@
 ---
 layout: post
 date:   2019-04-09 16:15:00
-title:  "Sklearn's machine learning algorithm"
+title:  "Generalized Linear Models"
 categories: machine learning
-tags:  machine learning algorithm
+tags:  machine learning algorithm generalized linear models
 mathjax: true
 ---
 
 * content
 {:toc}
-基于sklearn梳理机器学习涉及的知识，并不断补充丰富，以便加深理解。持续添加相关的应用场景及案例。
+广义线性模型 - Generalized Linear Models
 
 
 
@@ -57,3 +57,9 @@ mathjax: true
 	- 3.3.模型评估(量化预测的质量)
 	- 3.4.模型持久化
 	- 3.5.验证曲线(绘制分数以评估模型)
+
+---------
+
+# 1.1.广义线性模型(Generalized Linear Models)
+下面是一组用于回归的方法，其中目标值预期为输入变量的线性组合。在数学概念中，如果$\tilde{y}$是预测值，公式如下：
+$$\tilde{y} (w,x) = w_{0} + w_{1}x_{1} +...+w_{p}x_{p} $$
