@@ -1,8 +1,8 @@
 ---
 layout: post
 date:   2019-04-15 14:31:00
-title:  "advanced mathematics"
-categories: Functions And Limits
+title:  "Functions And Limits"
+categories: advanced mathematics
 tags:  function limit 函数 极限
 mathjax: true
 ---

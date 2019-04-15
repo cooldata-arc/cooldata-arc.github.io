@@ -2,7 +2,7 @@
 layout: post
 date:   2019-04-15 14:00:00
 title:  "advanced mathematics"
-categories: mathematics
+categories: advanced mathematics
 tags:  advanced mathematics
 mathjax: true
 ---
