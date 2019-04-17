@@ -112,7 +112,44 @@ $$y=f(x),x \in D$$
 
 $$R_{f}=\{y|y=f(x),x \in D\}$$
 
+**常见的集中分段函数：**
 
+* 绝对值函数
+
+$$公式：\qquad \qquad y = |x| =
+\begin{cases}
+    x, \qquad & x \gt 0, \\
+    0, \qquad & x = 0, \\
+		-x, \qquad & x \lt 0
+\end{cases}
+$$
+
+* 符号函数
+
+$$公式：\qquad \qquad y = sgn \;x =
+\begin{cases}
+	-1, & x \lt 0, \\
+	0, & x = 0, \\
+	1, & x \gt 0
+\end{cases}
+$$
+
+* 取整函数
+
+$$
+y = [x]
+$$
+
+**性质：**
+*对于$x \in (-\infty, +\infty), 有[x] \le x \le [x] + 1,且[x+1]=[x] + 1$*
+
+$$
+狄利克雷函数: \qquad \qquad D(x) =
+\begin{cases}
+	1, \qquad \qquad \mbox{$x$为有理数时} \\
+	0, \qquad \qquad \mbox{$x$为无理数时}
+\end{cases}
+$$
 
 ### 1.1.2.2. 函数的几种特性
 
