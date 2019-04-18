@@ -172,7 +172,10 @@ $$
 
 $如果函数f(x)在其定义域上有界就简称f(x)有界，或者说f(x)是有界函数$。
 
-由以上定义知$sinx,cosx,arcsinx,arctanx,arccosx都是有界函数且|sinx| \le 1,|cosx|\le1,|arcsinx|\le\frac{\pi}{2},|arctanx|\lt\frac{\pi}{2},|arccosx|\le\pi$.
+由以上定义知
+
+$$sinx,cosx,arcsinx,arctanx,arccosx都是有界函数且|sinx| \le 1,|cosx|\le1,|arcsinx|\le\frac{\pi}{2},|arctanx|\lt\frac{\pi}{2},|arccosx|\le\pi
+$$
 
 **有界性的判定:**<br>
 
