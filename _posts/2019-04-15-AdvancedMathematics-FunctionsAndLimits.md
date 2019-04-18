@@ -187,3 +187,45 @@ $如果函数f(x)在其定义域上有界就简称f(x)有界，或者说f(x)是�
 ### 1.1.2.4. 函数的运算
 
 ### 1.1.2.5. 基本初等函数
+
+* 常值函数
+
+$$
+f(x) = C, \qquad \mbox{C为常数}
+$$
+
+* 幂函数
+
+$$
+f(x)=x^a, \qquad （a为常数；其定义域由a确定，但不论a如何，在(0,+\infty)内总有定义
+$$
+
+* 指数函数
+
+$$
+f(x) = a^x, \qquad (a \gt 0, a \ne 1, x \in R)
+$$
+
+* 对数函数
+
+$$
+f(x) = log_{a}^{x}, \qquad (a>0, a \ne 1, x \in (0, +\infty))
+$$
+
+* 三角函数
+
+$$
+f(x) = sin \; x, \quad\qquad\qquad (x \in (-\infty, + \infty)) \\
+f(x) = cos \; x, \quad\qquad\qquad (x \in (-\infty, + \infty)) \\
+f(x) = tan \; x, \qquad (x \in (k\pi-\frac{\pi}{2}, k\pi + \frac{\pi}{2});k \in Z \\
+f(x) = cot \; x, \qquad (x \in (k\pi, (k+1)\pi)); k \in Z
+$$
+
+* 反三角函数
+
+$$
+arcsin \; x, \qquad (x \in [-1, 1]) \\
+arccos \; x, \qquad (x \in [-1, 1]) \\
+arctan \; x, \qquad\qquad (x \in R) \\
+arccot \; x, \qquad\qquad (x \in R)
+$$
