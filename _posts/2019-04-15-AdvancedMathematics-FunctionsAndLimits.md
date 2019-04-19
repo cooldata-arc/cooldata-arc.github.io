@@ -18,7 +18,7 @@ mathjax: true
 
 ---------
 # 目录
-- 第一章 函数与极限
+- 第一章 [函数与极限](https://superzhangx.github.io/2019/04/15/AdvancedMathematics-FunctionsAndLimits/)
 	- 第一节 映射与函数
 	- 第二节 数列的极限
 	- 第三节 函数的极限
