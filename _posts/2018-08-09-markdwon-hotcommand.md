@@ -31,8 +31,8 @@ Markdwon常用语法积累备忘，以备经常温习，熟练的使用Markdwon�
 
 #### 1.1.3 字体-字号-颜色
 
-Markdown是一种可以使用普通文本编辑器编写的标记语言，通过类似HTML的标记语法，它可以使普通文本内容具有一定的格式。但是它本身是不支持修改字体、字号与颜色等功能的！ 
-  CSDN-markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）！对，就是内嵌HTML，接下来要讲的功能就需要使用内嵌HTML的方法来实现。 
+Markdown是一种可以使用普通文本编辑器编写的标记语言，通过类似HTML的标记语法，它可以使普通文本内容具有一定的格式。但是它本身是不支持修改字体、字号与颜色等功能的！
+  CSDN-markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）！对，就是内嵌HTML，接下来要讲的功能就需要使用内嵌HTML的方法来实现。
 字体，字号和颜色编辑如下代码
 
 ``` html
@@ -42,8 +42,8 @@ Markdown是一种可以使用普通文本编辑器编写的标记语言，通过
 <font color=#0099ff size=7 face="黑体">color=#0099ff size=72 face="黑体"</font>
 <font color=#00ffff size=7>color=#00ffff</font>
 <font color=gray size=7>color=gray</font>
- 
-Size：规定文本的尺寸大小。可能的值：从 1 到 7 的数字。浏览器默认值是 
+
+Size：规定文本的尺寸大小。可能的值：从 1 到 7 的数字。浏览器默认值是
 ```
 
 #### 1.1.4 背景色
@@ -68,7 +68,7 @@ Markdown本身不支持背景色设置，需要采用内置html的方式实现�
 
 * 代码块：用2个以上TAB键起始的段落，会被认为是代码块（效果如下）：
 
-			
+
 struct {
   int year;
   int month;
@@ -94,11 +94,11 @@ LaTeX（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，�
 
 #### 1.2.2 规则
 
-* 空格：LaTeX中空格用来隔开单词(英语一类字母文字)，多个空格等效于一个空格；对中文没有作用。 
-* 换行：用控制命令“\”,或“ \newline”. 
-* 分段：用控制命令“\par” 或空出一行。 
-* 换页：用控制命令“\newpage”或“\clearpage” 
-* 特殊控制字符：#，$, %, &, - ,{, }, ^, ~ 
+* 空格：LaTeX中空格用来隔开单词(英语一类字母文字)，多个空格等效于一个空格；对中文没有作用。
+* 换行：用控制命令“\”,或“ \newline”.
+* 分段：用控制命令“\par” 或空出一行。
+* 换页：用控制命令“\newpage”或“\clearpage”
+* 特殊控制字符：#，$, %, &, - ,{, }, ^, ~
 
 要想输出这些控制符用下列命令：
 
@@ -114,7 +114,7 @@ LaTeX（LATEX，音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，�
 $a_{1}$ \qquad $x^{2}$ \qquad
 $e^{-\alpha t}$ \qquad
 $a^{3}_{ij}$\\
-$e^{x^2} \neq {e^x}^2$ 
+$e^{x^2} \neq {e^x}^2$
 ```
 
 Example:<br>
@@ -123,7 +123,7 @@ Example:<br>
 $a_{1}$ \qquad $x^{2}$ \qquad
 $e^{-\alpha t}$ \qquad
 $a^{3}_{ij}$\\
-$e^{x^2} \neq {e^x}^2$ 
+$e^{x^2} \neq {e^x}^2$
 
 * 平方根（square root）的输入命令为：\sqrt，n 次方根相应地为:\sqrt[n]。方根符号的大小由 LATEX自动加以调整。也可用 \surd 仅给出符号
 
@@ -170,3 +170,281 @@ $$\parallel A \parallel_{21} = \sum_i \sqrt{\sum_j a_{ij}^2}$$
 $\parallel \cdot \parallel_2 $
 
 $$\min_{w}$$
+
+#### 1.2.4 常用希腊字母表
+
+| Name     | Display    | Capital Case | Display    | Var Case    | Display       |
+| -------- | ---------- | ------------ | ---------- | ----------- | ------------- |
+| \alpha   | $\alpha$   |              |            |             |               |
+| \beta    | $\beta$    |              |            |             |               |
+| \gamma   | $\gamma$   | \Gamma       | $\Gamma$   |             |               |
+| \theta   | $\theta$   | \Theta       | $\Theta$   | \vartheta   | $\vartheta$   |
+| \mu      | $\mu$      |              |            |             |               |
+| \delta   | $\delta$   | \Delta       | $\Delta$   |             |               |
+| \epsilon | $\epsilon$ |              |            | \varepsilon | $\varepsilon$ |
+| \sigma   | $\sigma$   | \Sigma       | $\Sigma$   | \varsigma   | $\varsigma$   |
+| \pi      | $\pi$      | \Pi          | $\Pi$      | \varpi      | $\varpi$      |
+| \omega   | $\omega$   | \Omega       | $\Omega$   |             |               |
+| \xi      | $\xi$      | \Xi          | $\Xi$      |             |               |
+| \zeta    | $\zeta$    |              |            |             |               |
+| \chi     | $\chi$     |              |            |             |               |
+| \rho     | $\rho$     |              |            | \varrho     | $\varrho$     |
+| \phi     | $\phi$     | \Phi         | $\Phi$     | \varphi     | $\varphi$     |
+| \eta     | $\eta$     |              |            |             |               |
+| \lambda  | $\lambda$  | \Lambda      | $\Lambda$  |             |               |
+| \kappa   | $\kappa$   |              |            |             |               |
+| \nu      | $\nu$      |              |            |             |               |
+| \upsilon | $\upsilon$ | \Upsilon     | $\Upsilon$ |             |               |
+| \psi     | $\psi$     | \Psi         | $\Psi$     |             |               |
+| \tau     | $\tau$     |              |            |             |               |
+| \iota    | $\iota$    |              |            |             |               |
+| o        | $o$        |              |            |             |               |
+
+
+#### 1.2.5 常用特殊字符表
+
+| Name       | Display      | Name       | Display      | Name   | Display  | Name    | Display   |
+| ---------- | ------------ | ---------- | ------------ | ------ | -------- | ------- | --------- |
+| \times     | $\times$     | \div       | $\div$       | \pm    | $\pm$    | \mp     | $\mp$     |
+| \otimes    | $\otimes$    | \ominus    | $\ominus$    | \oplus | $\oplus$ | \odot   | $\odot$   |
+| \oslash    | $\oslash$    | \triangleq | $\triangleq$ | \ne    | $\ne$    | \equiv  | $\equiv$  |
+| \lt        | $\lt$        | \gt        | $\gt$        | \le    | $\le$    | \ge     | $\ge$     |
+| \cup       | $\cup$       | \cap       | $\cap$       | \Cup   | $\Cup$   | \Cap    | $\Cap$    |
+| \bigcup    | $\bigcup$    | \bigcap    | $\bigcap$    | \ast   | $\ast$   | \star   | $\star$   |
+| \bigotimes | $\bigotimes$ | \bigoplus  | $\bigoplus$  | \circ  | $\circ$  | \bullet | $\bullet$ |
+| \bigcirc   | $\bigcirc$   | \amalg     | $\amalg$     | \to    | $\to$    | \infty  | $\infty$  |
+| \vee       | $\vee$       | \wedge     | $\wedge$     | \lhd   | $\lhd$   | \rhd    | $\rhd$    |
+| \bigvee    | $\bigvee$    | \bigwedge  | $\bigwedge$  | \unlhd | $\unlhd$ | \unrhd  | $\unrhd$  |
+| \sqcap     | $\sqcap$     | \sqcup     | $\sqcup$     | \prec  | $\prec$  | \succ   | $\succ$   |
+| \subset    | $\subset$    | \supset    | $\supset$    | \sim   | $\sim$   | \approx | $\approx$ |
+| \subseteq  | $\subseteq$  | \supseteq  | $\supseteq$  | \cong  | $\cong$  | \doteq  | $\doteq$  |
+| \setminus  | $\setminus$  | \mid       | $\mid$       | \ll    | $\ll$    | \gg     | $\gg$     |
+| \parallel  | $\parallel$  | \Join      | $\Join$      | \in    | $\in$    | \notin  | $\notin$  |
+| \propto    | $\propto$    | \neg       | $\neg$       | \ldots | $\ldots$ | \cdots  | $\cdots$  |
+| \forall    | $\forall$    | \exists    | $\exists$    | \vdots | $\vdots$ | \ddots  | $\ddots$  |
+| \aleph     | $\aleph$     | \nabla     | $\nabla$     | \imath | $\imath$ | \jmath  | $\jmath$  |
+| \ell       | $\ell$       | \partial   | $\partial$   | \int   | $\int$   | \oint   | $\oint$   |
+| \uplus     | $\uplus$     | \biguplus  | $\biguplus$  |        |          |         |           |
+
+#### 1.2.6 其他特殊字符表
+
+| Name               | Display              | Name                | Display               |
+| ------------------ | -------------------- | ------------------- | --------------------- |
+| \triangleleft      | $\triangleleft$      | \triangleright      | $\triangleright$      |
+| \bigtriangleup     | $\bigtriangleup$     | \bigtriangledown    | $\bigtriangledown$    |
+| \uparrow           | $\uparrow$           | \downarrow          | $\downarrow$          |
+| \leftarrow         | $\leftarrow$         | \rightarrow         | $\rightarrow$         |
+| \Leftarrow         | $\Leftarrow$         | \Rightarrow         | $\Rightarrow$         |
+| \longleftarrow     | $\longleftarrow$     | \longrightarrow     | $\longrightarrow$     |
+| \Longleftarrow     | $\Longleftarrow$     | \Longrightarrow     | $\Longrightarrow$     |
+| \leftrightarrow    | $\leftrightarrow$    | \longleftrightarrow | $\longleftrightarrow$ |
+| \Leftrightarrow    | $\Leftrightarrow$    | \Longleftrightarrow | $\Longleftrightarrow$ |
+| \leftharpoonup     | $\leftharpoonup$     | \rightharpoonup     | $\rightharpoonup$     |
+| \leftharpoondown   | $\leftharpoondown$   | \rightharpoondown   | $\rightharpoondown$   |
+| \rightleftharpoons | $\rightleftharpoons$ | \S                  | $\S$                  |
+| \nwarrow           | $\nwarrow$           | \nearrow            | $\nearrow$            |
+| \swarrow           | $\swarrow$           | \searrow            | $\searrow$            |
+| \triangle          | $\triangle$          | \box                | $\box$                |
+| \diamond           | $\diamond$           | \diamondsuit        | $\diamondsuit$        |
+| \heartsuit         | $\heartsuit$         | \clubsuit           | $\clubsuit$           |
+| \spadesuit         | $\spadesuit$         |                     |                       |
+
+#### 1.2.7 Markdown原文
+
+``` markdown
+# Markdown中Latex常用语法
+
+## 常用希腊字母表
+
+| Name       | Display      | Capital Case   | Display      | Var Case      | Display         |
+| ---------  | :----------: | -------------- | :----------: | ------------  | :-------------: |
+| `\alpha`   | $\alpha$     |                |              |               |                 |
+| `\beta`    | $\beta$      |                |              |               |                 |
+| `\gamma`   | $\gamma$     | `\Gamma`       | $\Gamma$     |               |                 |
+| `\theta`   | $\theta$     | `\Theta`       | $\Theta$     | `\vartheta`   | $\vartheta$     |
+| `\mu`      | $\mu$        |                |              |               |                 |
+| `\delta`   | $\delta$     | `\Delta`       | $\Delta$     |               |                 |
+| `\epsilon` | $\epsilon$   |                |              | `\varepsilon` | $\varepsilon$   |
+| `\sigma`   | $\sigma$     | `\Sigma`       | $\Sigma$     | `\varsigma`   | $\varsigma$     |
+| `\pi`      | $\pi$        | `\Pi`          | $\Pi$        | `\varpi`      | $\varpi$        |
+| `\omega`   | $\omega$     | `\Omega`       | $\Omega$     |               |                 |
+| `\xi`      | $\xi$        | `\Xi`          | $\Xi$        |               |                 |
+| `\zeta`    | $\zeta$      |                |              |               |                 |
+| `\chi`     | $\chi$       |                |              |               |                 |
+| `\rho`     | $\rho$       |                |              | `\varrho`     | $\varrho$       |
+| `\phi`     | $\phi$       | `\Phi`         | $\Phi$       | `\varphi`     | $\varphi$       |
+| `\eta`     | $\eta$       |                |              |               |                 |
+| `\lambda`  | $\lambda$    | `\Lambda`      | $\Lambda$    |               |                 |
+| `\kappa`   | $\kappa$     |                |              |               |                 |
+| `\nu`      | $\nu$        |                |              |               |                 |
+| `\upsilon` | $\upsilon$   | `\Upsilon`     | $\Upsilon$   |               |                 |
+| `\psi`     | $\psi$       | `\Psi`         | $\Psi$       |               |                 |
+| `\tau`     | $\tau$       |                |              |               |                 |
+| `\iota`    | $\iota$      |                |              |               |                 |
+| `o`        | $o$          |                |              |               |                 |
+
+## 常用特殊字符表
+
+| Name         | Display        | Name         | Display        | Name     | Display    | Name      | Display     |
+| -----------  | :------------: | -----------  | :------------: | -------  | :--------: | --------  | :---------: |
+| `\times`     | $\times$       | `\div`       | $\div$         | `\pm`    | $\pm$      | `\mp`     | $\mp$       |
+| `\otimes`    | $\otimes$      | `\ominus`    | $\ominus$      | `\oplus` | $\oplus$   | `\odot`   | $\odot$     |
+| `\oslash`    | $\oslash$      | `\triangleq` | $\triangleq$   | `\ne`    | $\ne$      | `\equiv`  | $\equiv$    |
+| `\lt`        | $\lt$          | `\gt`        | $\gt$          | `\le`    | $\le$      | `\ge`     | $\ge$       |
+| `\cup`       | $\cup$         | `\cap`       | $\cap$         | `\Cup`   | $\Cup$     | `\Cap`    | $\Cap$      |
+| `\bigcup`    | $\bigcup$      | `\bigcap`    | $\bigcap$      | `\ast`   | $\ast$     | `\star`   | $\star$     |
+| `\bigotimes` | $\bigotimes$   | `\bigoplus`  | $\bigoplus$    | `\circ`  | $\circ$    | `\bullet` | $\bullet$   |
+| `\bigcirc`   | $\bigcirc$     | `\amalg`     | $\amalg$       | `\to`    | $\to$      | `\infty`  | $\infty$    |
+| `\vee`       | $\vee$         | `\wedge`     | $\wedge$       | `\lhd`   | $\lhd$     | `\rhd`    | $\rhd$      |
+| `\bigvee`    | $\bigvee$      | `\bigwedge`  | $\bigwedge$    | `\unlhd` | $\unlhd$   | `\unrhd`  | $\unrhd$    |
+| `\sqcap`     | $\sqcap$       | `\sqcup`     | $\sqcup$       | `\prec`  | $\prec$    | `\succ`   | $\succ$     |
+| `\subset`    | $\subset$      | `\supset`    | $\supset$      | `\sim`   | $\sim$     | `\approx` | $\approx$   |
+| `\subseteq`  | $\subseteq$    | `\supseteq`  | $\supseteq$    | `\cong`  | $\cong$    | `\doteq`  | $\doteq$    |
+| `\setminus`  | $\setminus$    | `\mid`       | $\mid$         | `\ll`    | $\ll$      | `\gg`     | $\gg$       |
+| `\parallel`  | $\parallel$    | `\Join`      | $\Join$        | `\in`    | $\in$      | `\notin`  | $\notin$    |
+| `\propto`    | $\propto$      | `\neg`       | $\neg$         | `\ldots` | $\ldots$   | `\cdots`  | $\cdots$    |
+| `\forall`    | $\forall$      | `\exists`    | $\exists$      | `\vdots` | $\vdots$   | `\ddots`  | $\ddots$    |
+| `\aleph`     | $\aleph$       | `\nabla`     | $\nabla$       | `\imath` | $\imath$   | `\jmath`  | $\jmath$    |
+| `\ell`       | $\ell$         | `\partial`   | $\partial$     | `\int`   | $\int$     | `\oint`   | $\oint$     |
+| `\uplus`     | $\uplus$       | `\biguplus`  | $\biguplus$    |          |            |           |             |
+
+### 其他
+
+| Name                 | Display                | Name                  | Display                 |
+| -------------------  | :--------------------: | --------------------  | :---------------------: |
+| `\triangleleft`      | $\triangleleft$        | `\triangleright`      | $\triangleright$        |
+| `\bigtriangleup`     | $\bigtriangleup$       | `\bigtriangledown`    | $\bigtriangledown$      |
+| `\uparrow`           | $\uparrow$             | `\downarrow`          | $\downarrow$            |
+| `\leftarrow`         | $\leftarrow$           | `\rightarrow`         | $\rightarrow$           |
+| `\Leftarrow`         | $\Leftarrow$           | `\Rightarrow`         | $\Rightarrow$           |
+| `\longleftarrow`     | $\longleftarrow$       | `\longrightarrow`     | $\longrightarrow$       |
+| `\Longleftarrow`     | $\Longleftarrow$       | `\Longrightarrow`     | $\Longrightarrow$       |
+| `\leftrightarrow`    | $\leftrightarrow$      | `\longleftrightarrow` | $\longleftrightarrow$   |
+| `\Leftrightarrow`    | $\Leftrightarrow$      | `\Longleftrightarrow` | $\Longleftrightarrow$   |
+| `\leftharpoonup`     | $\leftharpoonup$       | `\rightharpoonup`     | $\rightharpoonup$       |
+| `\leftharpoondown`   | $\leftharpoondown$     | `\rightharpoondown`   | $\rightharpoondown$     |
+| `\rightleftharpoons` | $\rightleftharpoons$   | `\S`                  | $\S$                    |
+| `\nwarrow`           | $\nwarrow$             | `\nearrow`            | $\nearrow$              |
+| `\swarrow`           | $\swarrow$             | `\searrow`            | $\searrow$              |
+| `\triangle`          | $\triangle$            | `\box`                | $\Box$                  |
+| `\diamond`           | $\diamond$             | `\diamondsuit`        | $\diamondsuit$          |
+| `\heartsuit`         | $\heartsuit$           | `\clubsuit`           | $\clubsuit$             |
+| `\spadesuit`         | $\spadesuit$           |                       |                         |
+
+
+## 公式语法
+
+- 上下标`_ ^ , _{}^{}`：
+    $$ y = x_i^{a_1^2} $$
+- 公式中插入文本`\mbox{}`：
+    $$ y = x^2 \; \mbox{(二次函数)} $$
+- 公式中插入空格`\,  \;  \quad  \qquad`间隔依次变宽：
+    $$ ab $$ $$ a\,b $$ $$ a\;b $$ $$ a\quad b $$ $$ a\qquad b $$
+
+- 字母上方横线`\overline{}, \bar{}`：
+    $$ \overline{xyz} \mbox{ 或 } \bar{x} $$
+- 字母下方横线`\underline{}`：
+    $$ \underline{ABC} $$
+- 字母上方波浪线`\tilde{}, \widetilde{}`：
+    $$ \tilde{A} \mbox{ 或 } \widetilde{ABC} $$
+- 字母上方尖号^`\hat{}, \widehat{}`：
+    $$ \hat{A} \mbox{ 或 } \widehat{ABC} $$
+- 字母上方箭头`\vec{}, \overleftarrow{}, \overrightarrow{}`：
+    $$ \vec{ab} \mbox{ 或 } \overleftarrow{ab} \mbox{ 或 } \overrightarrow{ab} $$
+- 字母上方花括号`\overbrace{}`，或下方花括号`\underbrace{}`：
+    $$ \overbrace{1+2+3} \mbox{ 或 } \underbrace{1+2+3} $$
+- 字母上方点号`\dot{}, \ddot{}`：
+    $$ \dot{a} \mbox{ 或 } \ddot{a} $$
+- 省略号`\dots, \cdots`
+    $$ 1,2,\dots  \qquad  1,2,\cdots $$
+
+- 积分`\int_{}^{}`：
+    $$ \int_{-\infty}^{+\infty} f(x) \mathrm{d}x $$
+
+    双重积分`\iint`：$$ \iint_{-\infty}^{+\infty} f(x,y) \mathrm{d}x \mathrm{d}y $$
+    行内积分：$\int_{-\infty}^{+\infty} f(x) \mathrm{d}x$
+    行内积分limits模式`\int\limits_{}^{}`：$\int\limits_{-\infty}^{+\infty} f(x) \mathrm{d}x$
+    行内积分display模式`\displaystyle \int_{}^{}`：$\displaystyle \int_{-\infty}^{+\infty} f(x) \mathrm{d}x$
+
+    圆圈积分`\oint`：$$ \oint_{-\infty}^{+\infty} $$
+
+- 求和`\sum_{}^{}`：
+    $$ \sum_{i=1}^{n} i^2 $$
+
+    行内求和：$\sum_{i=1}^{n} i^2$
+    行内求和limits模式`\sum\limits_{}^{}`：$\sum\limits_{i=1}^{n} i^2$
+    行内求和display模式`\displaystyle \sum_{}^{}`：$\displaystyle \sum_{i=1}^{n} i^2$
+
+- 求乘积`\prod_{}^{}`：
+    $$ \prod_{i=1}^{n} a_i $$
+
+- 分数`\frac{up}{down}`：
+    $$ x_1,x_2 = \frac{b^2 \pm 4ac}{2a} $$
+
+- 根号`\sqrt`：
+    $$ r = \sqrt{x^2+y^2} $$
+
+    多次根号`\sqrt[n]`： $$ x^{2/3} = \sqrt[3]{x^2} $$
+
+## 编号
+
+- 插入编号：
+    使用`\tag`指令指定公式的具体编号，并使用`\label`指令埋下锚点。如`y=x^2 \tag{1.5a} \label{eq:test}`：
+    $$ y=x^2 \tag{1.5a}\label{eq:test} $$
+
+- 引用编号：
+    使用`\eqref`指令引用前面埋下的锚点，`\eqref{eq:test}`将显示为：
+    $$ \eqref{eq:test} $$
+
+## 方程组
+
+- 左侧花括号
+
+    ```latex
+    \begin{equation}
+    % \begin{equation*} 加'*'去掉公式编号
+    \left\{
+    \begin{aligned}     %请使用'aligned'或'align*'
+    2x + y &= 1  \\     %加'&'指定对齐位置
+    2x + 2y &= 2
+    \end{aligned}
+    \right.
+    \end{equation}
+    % \end{equation*}   加'*'去掉公式编号
+
+    % 注意：在 markdown 环境下，某些特殊字符，如'\', '*'等，会首先被 markdown 语法转义，然后再被 Latex 转义。
+    % 因此有时候 '\{'需要写作'\\{'，'*'需要写作'\*'，'\\'需要写作'\\\\'等，视不同的解释环境而定
+    ```
+
+    $$ \begin{equation}
+    \left\\{
+    \begin{aligned}
+    2x + y &= 1 \\\\
+    2x + 2y &= 2
+    \end{aligned}
+    \right.
+    \end{equation} $$
+
+    **注**：如果各个方程需要在某个字符处对齐（如等号对齐），只需在所有要对齐的字符前加上 `&` 符号。如果不需要公式编号，只需在宏包名称后加上 `*` 号。
+
+
+- 分情况讨论方程式
+
+    ```latex
+    f(x) =
+    \begin{cases}
+    x^2 \qquad & a \gt 0 \\
+    e^x \qquad & a \le 0
+    \end{cases}
+    ```
+
+    $$ f(x) = \begin{cases}
+    x^2 \qquad & a \gt 0 \\\\
+    e^x \qquad & a \le 0
+    \end{cases} $$
+
+    $$ \begin{aligned}
+    a &= 1 \\\\
+    bcd &= 2
+    \end{aligned} $$
+```
