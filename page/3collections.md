@@ -13,6 +13,8 @@ type: page
 
 * [kafka-streams-machine-learning-examples](https://github.com/kaiwaehner/kafka-streams-machine-learning-examples)
 
+【No550】尚硅谷大数据技术之机器学习和推荐系统 - 解压密码：www.javaxxz.com_iokdz@%&
+
 ## 算法
 
 * [共轭先验](https://www.lesswrong.com/posts/u2gWM2poRPkBPFeLc/the-joys-of-conjugate-priors)
