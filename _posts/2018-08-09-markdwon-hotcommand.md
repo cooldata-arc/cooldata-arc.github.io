@@ -520,7 +520,7 @@ $$\min_{w}$$
 
 ### typora 画流程图 | 时序图(顺序图) | 甘特图
 
-**1. 横向流程图源码格式:** </br>
+#### **1. 横向流程图源码格式** </br>
 ```mermaid
 graph LR
 A[方形] -->B(圆角)
@@ -530,7 +530,7 @@ A[方形] -->B(圆角)
     F[横向流程图]
 ```
 
-**2. 竖向流程图源码格式:**
+#### **2. 竖向流程图源码格式**
 ```mermaid
 graph TD
 A[方形] --> B(圆角)
@@ -540,7 +540,7 @@ A[方形] --> B(圆角)
     F[竖向流程图]
 ```
 
-**3. 标准流程图源码格式:**
+#### **3. 标准流程图源码格式**
 ```flow
 st=>start: 开始框
 op=>operation: 处理框
@@ -553,7 +553,7 @@ cond(yes)->io->e
 cond(no)->sub1(right)->op
 ```
 
-**4. 标准流程图源码格式（横向）:**
+#### **4. 标准流程图源码格式（横向）**
 ```flow
 st=>start: 开始框
 op=>operation: 处理框
@@ -566,7 +566,7 @@ cond(yes)->io(bottom)->e
 cond(no)->sub1(right)->op
 ```
 
-**5. UML时序图源码样例:**
+#### **5. UML时序图源码样例**
 
 ```sequence
 对象A->对象B: 对象B你好吗?（请求）
@@ -576,7 +576,7 @@ Note left of 对象A: 对象A的描述(提示)
 对象A->对象B: 你真的好吗？
 ```
 
-**6. UML时序图源码复杂样例:**
+#### **6. UML时序图源码复杂样例**
 
 ```sequence
 Title: 标题：复杂使用
@@ -592,7 +592,7 @@ participant C
 Note right of C: 没人陪我玩
 ```
 
-**7. UML标准时序图样例:**
+#### **7. UML标准时序图样例**
 
 ```mermaid
 %% 时序图例子,-> 直线，-->虚线，->>实线箭头
@@ -609,26 +609,135 @@ Note right of C: 没人陪我玩
     李四-->王五: 很好!
 ```
 
-**8. 甘特图样例:**
+#### **8. 甘特图样例**
 
 ``` mermaid
-%% 语法示例
-        gantt
-        dateFormat  YYYY-MM-DD
-        title 软件开发甘特图
-        section 设计
-        需求                      :done,    des1, 2014-01-06,2014-01-08
-        原型                      :active,  des2, 2014-01-09, 3d
-        UI设计                     :         des3, after des2, 5d
-    未来任务                     :         des4, after des3, 5d
-        section 开发
-        学习准备理解需求                      :crit, done, 2014-01-06,24h
-        设计框架                             :crit, done, after des2, 2d
-        开发                                 :crit, active, 3d
-        未来任务                              :crit, 5d
-        耍                                   :2d
-        section 测试
-        功能测试                              :active, a1, after des3, 3d
-        压力测试                               :after a1  , 20h
-        测试报告                               : 48h
+gantt
+
+section Section
+      Completed: done, des1, 2014-01-06, 2014-01-08
+      Active   : active, des2, 2014-01-07, 3d
+     Parallel 1    : des3, after des1, 1d
+     Parallel 2    : des4, after des1, 1d
+     Parallel 3    : des5, after des3, 1d
+     Parallel 4    : des6, after des4, 1d
+```
+
+#### **9. 类图**
+``` mermaid
+%%{init: {'securityLevel': 'loose', 'theme':'default'}}%%
+classDiagram
+
+  Class01 <|-- AveryLongClass: Cool
+  <<interface>> Class01
+  Class09-->C2: Where am i?
+  Class09 --* C3
+  Class09 --|> Class07
+  Class07: equals()
+  Class07: Object[] elementData
+  Class01: size()
+  Class01: int chimp
+  Class01: int gorilla
+  class Class10 {
+  <<service>>
+  int id
+  size()
+ }
+```
+
+#### **10. 状态图**
+``` mermaid
+stateDiagram
+
+  [*]-->Active
+  state Active {
+    [*]-->NumLockOff
+    NumLockOff-->NumLockOn : EvNumLockPressed
+    NumLockOn-->NumLockOff : EvNumLockPressed
+    --
+    [*]-->CapsLockOff
+    CapsLockOff-->CapsLockOn : EvCapsLockPressed
+    CapsLockOn-->CapsLockOff : EvCapsLockPressed
+    --
+    [*]-->ScrollLockOff
+    ScrollLockOff-->ScrollLockOn : EvCapsLockPressed
+    ScrollLockOn-->ScrollLockOff : EvCapsLockPressed
+       }
+```
+
+#### **11. 实体关系图**
+``` mermaid
+erDiagram
+  CUSTOMER ||--o{ORDER : places
+  ORDER ||--|{LINE-ITEM : contains
+  CUSTOMER}|..|{DELIVERY-ADDRESS : uses
+```
+
+#### **12. 统计类图表**
+
+**1. 饼图**
+``` mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcccc', 'edgeLabelBackground':'#ffffee', 'tertiaryColor': '#fff0f0'}}}%%
+
+pie
+
+  title Key elements in Product X
+  "Calcium" : 42.96
+  "Potassium" : 50.05
+  "Magnesium" : 10.01
+  "Iron" :  5
+```
+
+#### **13. 旅程图**
+``` mermaid
+journey
+  title My working day
+  section Go to work
+    Make tea: 5: Me
+    Go upstairs: 3: Me
+    Do work: 1: Me, Cat
+  section Go home
+    Go downstairs: 5: Me
+    Sit down: 3: Me
+```
+
+#### **14. subgraph**
+``` mermaid
+%%{init: {'theme': 'default'}}%%
+flowchart LR
+  subgraph TOP
+    direction TB
+    subgraph B1
+        direction RL
+        i1 -->f1
+    end
+    subgraph B2
+        direction BT
+        i2 -->f2
+    end
+  end
+  A --> TOP --> B
+  B1 --> B2
+```
+
+#### **15. Styling a node**
+```mermaid
+flowchart LR
+    id1(Start)-->id2(Stop)
+    style id1 fill:#f9f,stroke:#333,stroke-width:4px
+    style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+```
+
+#### **16. Classes**
+<style>
+    .someclass > rect{
+        fill:#FF0000;
+        stroke:#FFFF00;
+        stroke-width:4px;
+    }
+</style>
+```mermaid
+flowchart LR
+  A("这里是A"):::someclass --> B{"这里是B"}
+  classDef someclass fill:#f96,stroke:#333
 ```
