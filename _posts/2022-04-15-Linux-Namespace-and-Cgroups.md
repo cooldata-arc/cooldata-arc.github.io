@@ -26,7 +26,7 @@ Linux 容器的基石 Namespace 和 Cgroups. Namespace 限制了容器能看到�
 
 | Namespace   | Flag        | Page        | Isolates(隔离资源汇总)      |
 | :---        |    :----:   |    :----:   | :--- |
-| Ggroup | CLONE_NEWCGROUP | cgroup_namespaces(7) | Cgroup root directory |
+| Cgroup | CLONE_NEWCGROUP | cgroup_namespaces(7) | Cgroup root directory |
 | IPC | CLONE_NEWIPC | ipc_namespaces(7) | System V IPC</br> POSIX message queues |
 | Network | CLONE_NEWNET | network_namespaces(7) | Network devices, stacks, ports, etc. |
 | Mount | CLONE_NEWNS | mount_namespaces(7) | Mount points |
