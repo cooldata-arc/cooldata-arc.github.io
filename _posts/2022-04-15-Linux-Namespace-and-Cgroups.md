@@ -14,14 +14,15 @@ Linux 容器的基石 Namespace 和 Cgroups. Namespace 限制了容器能看到�
 
 # 1. Namespace
 
-> ref-url: https://man7.org/linux/man-pages/man7/namespaces.7.html
+> ref-url: https://man7.org/linux/man-pages/man7/namespaces.7.html  
 
 命名空间将全局系统资源包装在一个抽象中，这使得命名空间中的进程似乎拥有自己的独立的全局资源实例。对全局资源的更改对作为命名空间成员的其他进程是可见的，但对其他进程是不可见的。
 
 ## 1.1 Namespace types
-    * 第二列显示了用于指定各种api中的名称空间类型的标志值。
-    * 第三列标识提供命名空间类型详细信息页面
-    * 最后一列是由命名空间类型隔离的资源汇总
+
+* 第二列显示了用于指定各种api中的名称空间类型的标志值。
+* 第三列标识提供命名空间类型详细信息页面
+* 最后一列是由命名空间类型隔离的资源汇总
 
 | Namespace   | Flag        | Page        | Isolates(隔离资源汇总)      |
 | :---        |    :----:   |    :----:   | :--- |
